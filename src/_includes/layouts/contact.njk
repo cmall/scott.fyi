@@ -4,15 +4,18 @@
 {% set introHeading = title %}
 
 {% block content %}
-  <main id="main-content" tabindex="-1">
-    <article class="[ post ] [ h-entry ]">
-      {% include "partials/components/intro.njk" %}
-      <div class="[ post__body ] [ inner-wrapper ] [ leading-loose pad-top-900 pad-bottom-900 text-500 ] [ sf-flow ] [ e-content ]">
-        {{ content | safe }}
-        {% include "partials/components/contact-form.njk" %}
-      </div>
-    </article>
-  </main>
+	<article class="container" role="main" id="main-content">
+    <h1>{{ title }}</h1>
+
+    <div class="post__body">
+      {{ content | safe }}
+      {% include "partials/components/contact-form.njk" %}
+    </div>
+	</article>
+
+	<style>.form{margin-top:2rem}form .field input{margin-top:.75rem;font-size:1.75rem;padding:1rem;width:100%;max-width:40rem}form .field textarea{margin-top:.75rem;font-size:1.75rem;padding:1rem;width:100%;height:25rem;font-family:arial}form .submit .button{text-decoration:none;background-color:#eee;padding:1rem 1rem;border:none;border-radius:4px;cursor:pointer;color:#dc0073;transition:.1s linear}form .submit .button:hover{background-color:#666;color:#fff}form .field label{margin-top:1rem;display:block}</style>
+
 {% endblock %}
+
 
 {{ content | safe }}

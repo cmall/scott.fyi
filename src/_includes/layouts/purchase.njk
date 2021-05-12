@@ -1,0 +1,123 @@
+{% extends 'layouts/base.njk' %}
+
+{# Intro content #}
+{% set introHeading = title %}
+
+{% block content %}
+	<article class="container" role="main" id="main-content">
+    <div class="post__body">
+      {{ content | safe }}
+    </div>
+	</article>
+
+  <section class="container">
+    <div class="product">
+      <div class="description">
+        <h4>{{ price }}</h4>
+      </div>
+    </div>
+
+    <div class="buttons">
+			<button id="down" class="btn" onclick="down('1')">-</button>
+			<input type="text" id="quantity" class="btn input-number" value="1" />
+			<button id="up" class="btn" onclick="up('100')">+</span></button>
+			<button class="pay btn" data-checkout-mode="payment" data-price-id="{{ price_id }}">Purchase</button>
+    </div>
+  </section>
+
+	<script src="https://js.stripe.com/v3/"></script>
+  <script>
+		function up(max) {
+		    document.getElementById("quantity").value = parseInt(document.getElementById("quantity").value) + 1;
+		    if (document.getElementById("quantity").value >= parseInt(max)) {
+		        document.getElementById("quantity").value = max;
+		    }
+		}
+		function down(min) {
+		    document.getElementById("quantity").value = parseInt(document.getElementById("quantity").value) - 1;
+		    if (document.getElementById("quantity").value <= parseInt(min)) {
+		        document.getElementById("quantity").value = min;
+		    }
+		}
+
+    // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
+    var PUBLISHABLE_KEY = 'pk_live_51I0t2KAFspKLuazZj1LsZufHFwqMBo3YZrAhhfZW2MOFYY6HqBnXHY6BapWouyX38EHPPNzdCVoR18LuFpwMIlxZ00lUeIyh06';
+    // Replace with the domain you want your users to be redirected back to after payment
+    var DOMAIN = location.href.replace(/[^/]*$/, '');
+    var stripe = Stripe(PUBLISHABLE_KEY);
+
+    // Handle any errors from Checkout
+    var handleResult = function (result) {
+      if (result.error) {
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    };
+
+    document.querySelectorAll('.pay').forEach(function (button) {
+      button.addEventListener('click', function (e) {
+        var mode = e.target.dataset.checkoutMode;
+        var priceId = e.target.dataset.priceId;
+        var quantity = document.getElementById('quantity').value;
+
+        var items = [{ price: priceId, quantity: parseInt(quantity) }];
+
+        stripe
+          .redirectToCheckout({
+            mode: mode,
+            lineItems: items,
+						shippingAddressCollection: {
+							allowedCountries: ['US', 'CA'],
+						},
+            successUrl:
+              DOMAIN + 'purchase-success?session_id={CHECKOUT_SESSION_ID}',
+            cancelUrl:
+              DOMAIN + 'books?session_id={CHECKOUT_SESSION_ID}',
+          })
+          .then(handleResult);
+      });
+    });
+  </script>
+
+	<style>
+	article img {width:40%; margin-left:3rem;}
+
+	#quantity {
+		width:5rem;
+		font-weight:bold;
+	}
+
+	.pay {
+		color:#FFF;
+		background-color:#DC0073!important;
+	}
+
+	.btn {
+	  background-color: #eee;
+	  padding: 1.25rem 1rem;
+	  min-width:4rem;
+	  border-radius: 4px;
+	  font-size: 2rem;
+	  border:none;
+	  cursor: pointer!important;
+	  display: inline-block;
+	  margin-bottom: .25em;
+		font-weight:bold;
+		text-align: center;
+	}
+
+	@media only screen and (max-width: 500px) {
+
+		article img {
+			width:calc(4rem + 100%)!important;
+			margin:0 -2rem 2rem!important;
+			border-radius: 0!important;
+		}
+
+	}
+	</style>
+
+{% endblock %}
+
+
+{{ content | safe }}

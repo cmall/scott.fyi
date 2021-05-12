@@ -1,0 +1,13 @@
+---
+title: Back to School
+date: '2020-10-12'
+author: Scott
+---
+
+![Scott doing school work at his desk.](/images/scott_home_school-8fbb707fc78ba3ebf5f4717e8545e833.jpg)
+
+I think I’m getting tired of COVID. It’s hard to play a lot of things with family and friends. I see kids at school who are having fun with their friends. They don’t care about COVID. They don’t wear masks, don’t distance from others. I wish I didn’t care. I wish I wasn’t worried so much about passing COVID to my Grandma or Nana. I know I would be ok, but my grandparents might not. Why don’t other kids care about their grandparents? Just trying not to be upset because I have missed my friends but I don’t want my friends making me sick. I don’t want to pass COVID to someone else. It sounds simple and I just thought people cared for other people. It’s just a mask, not an actual bubble you get in. The social distancing is ok, you can see and talk to people, just not too close. I want this over, but how is it going to end if people stop listening to doctors? I’m going to try and act in a way I will not regret later. I’m going to be cautious, follow the rules, and try and get a good day in every day. I want to know I did what is right, not what I am pressured into doing by those who care only for themselves. Ok, I’m sorry, I just believe in science and doctors.
+
+I am happy with school so far. I’m on an academic plan for the first time ever! I want to graduate with a real diploma. It’s awesome. Im learning lots of stuff. It’s so much better than in the past. Before I could type I was treated like I did not know anything. So I was bored. But now I’m learning lots. Oh it’s awesome. I only have a couple courses because of COVID but I’m learning like everyone else in the class. I’m not trying to be a student who is handed a pass. I want to earn good grades. I’m working on my vision support plan to help me see my work better. I think I’m a bit excited to get better vision support so I don’t miss things . I sometimes miss decimals or negative signs in math. I get answers wrong just because I didn’t see the question right. But I think I will have better support soon. My new room at home is awesome. I love it. I have so much set up it’s amazing what I'm seeing with the right set-up. Oh if school had this too, I don’t think would have a better place to learn. My school intervenor is great but it’s nice to see too. I’m ok with my school they are good at trying things for me. I know it’s expensive. 
+
+What I’m really excited about is my children’s book. It’s getting printed soon. My friend drew the pictures. The drawings are amazing. Oh, next blog I’ll say more. Thanks for reading.

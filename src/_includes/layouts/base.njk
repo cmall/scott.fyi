@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml" />
-  <link rel="icon" href="{{ site.faviconPath }}" type="image/png" />
-  {% include "partials/global/meta-info.njk" %}
-  <script>document.documentElement.classList.remove('no-js');</script>
-  <style>{% include "assets/css/global.css" %}</style>
+<head> 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="title" content="Scott Mallinson - Happiness is for Everyone">
+	<meta name="description" content="Scott is a deafblind teenager in Vancouver who believes in making the world more accessible.">
+	<meta name="keywords" content="deafblind">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" content="English">
+	
+	<link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+	<script>document.documentElement.classList.remove('no-js');</script>
+	
+	<style>{% include "assets/css/global.css" %}</style>
+
+	<script>function __onloadCSS(){document.body.classList.remove("nf")}!function(u){"use strict";var e=function(e,t,n){var o,r=u.document,l=r.createElement("link");if(t)o=t;else{var a=(r.body||r.getElementsByTagName("head")[0]).childNodes;o=a[a.length-1]}var d=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",function e(t){if(r.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(l,t?o:o.nextSibling)});var i=function(e){for(var t=l.href,n=d.length;n--;)if(d[n].href===t)return e();setTimeout(function(){i(e)})};function s(){l.addEventListener&&l.removeEventListener("load",s),l.media=n||"all"}return l.addEventListener&&l.addEventListener("load",s),(l.onloadcssdefined=i)(s),l};"undefined"!=typeof exports?exports.loadCSS=e:u.loadCSS=e}("undefined"!=typeof global?global:this),function(o){if(o.loadCSS){var e=loadCSS.relpreload={};if(e.support=function(){try{return o.document.createElement("link").relList.supports("preload")}catch(e){}},e.poly=function(){for(var e=o.document.getElementsByTagName("link"),t=0;t<e.length;t++){var n=e[t];"preload"===n.rel&&"style"===n.getAttribute("as")&&(o.loadCSS(n.href,n),n.rel=null)}},!e.support()){e.poly();var t=o.setInterval(e.poly,300);o.addEventListener&&o.addEventListener("load",function(){o.clearInterval(t)})}}}(this),document.addEventListener("DOMContentLoaded",function(){setTimeout(function(){document.body.classList.remove("nf")},500)});</script>
+
+	<link rel="me" href="mailto:scott@mallinson.ca">
   {% block head %}
   {% endblock %}
 </head>
@@ -19,7 +29,6 @@
   {% include "partials/global/site-foot.njk" %}
   {% block foot %}
   {% endblock %}
-  <script type="module" src="/js/components/theme-toggle.js" async defer></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {

@@ -1,13 +1,11 @@
 {
-  "showThemeCredit": true,
-  "name": "Hylia Starter Kit",
-  "shortDesc": "Hylia is a lightweight Eleventy starter kit to help you to create your own blog or personal website.",
-  "url": "https://hylia.website",
-  "authorEmail": "me@andy-bell.design",
-  "authorHandle": "@hankchizljaw",
-  "authorName": "Andy Bell",
+  "showThemeCredit": false,
+  "name": "Happiness is for Everyone",
+  "shortDesc": "Scott is a deafblind teenager in Vancouver who believes in making the world more accessible.",
+  "url": "https://scott.fyi",
+  "authorEmail": "hello@scott.fyi",
+  "authorName": "Scott Mallinson",
   "enableThirdPartyComments": false,
-  "maxPostsPerPage": 5,
-  "paymentPointer": "$ilp.uphold.com/MggmnFEyQqhk",
+  "maxPostsPerPage": 100,
   "faviconPath": "/images/favicon.png"
 }

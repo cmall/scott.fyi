@@ -1,24 +1,44 @@
-<footer role="contentinfo" class="[ site-foot ] [ pad-top-700 pad-bottom-900 ]">
-  <div class="wrapper">
-    <div class="[ site-foot__inner ] [ md:box-flex space-between align-start ]">
-      {% if site.shortDesc %}
-        <div>
-          <article class="[ site-foot__details ] [ sf-flow measure-compact ]">
-            <h2 class="font-base text-600">{{ site.name }}</h2>
-            {{ site.shortDesc | markdownFilter | safe }}
-          </article>
-        </div>
-      {% endif %}
-      <div>
-        {% set ariaLabel = 'footer navigation' %}
-        {% include "partials/components/nav.njk" %}
-        <theme-toggle></theme-toggle>
-      </div>
+
+  <div class="bfold" id="allposts">
+    <div class="container parent">
+			{% include "partials/components/post-list.njk" %}
+  
+      <section>
+
+        <form action="https://fyi.us7.list-manage.com/subscribe/post?u=0c19d88b59dccd847ee3971aa&amp;id=a98fbb527d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+          <h4>Subscribe</h4>
+          
+          <p>I will send a notification each time I write a new blog post, or when I have information about my books.</p>
+  
+          <label for="mce-EMAIL">Email Address</label>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+  
+          <label for="mce-FNAME">First Name</label>
+          <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="First Name">
+  
+          <label for="mce-LNAME">Last Name </label>
+          <input type="text" value="" name="LNAME" class="" id="mce-LNAME" placeholder="Last Name">
+  
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+  
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0c19d88b59dccd847ee3971aa_a98fbb527d" tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+
+        </form>
+    
+      </section>
     </div>
-    {% if site.showThemeCredit %}
-      <p class="[ site-foot__credit ] [ pad-top-900 ]">
-        Powered by the <a href="https://hylia.website" rel="external">Hylia Eleventy Starter Kit v{{ pkg.version }}</a>.
-      </p>
-    {% endif %}
   </div>
-</footer>
+
+
+  <style>.form{margin-top:2rem}form input{font-size:1.5rem;padding:.75rem;width:100%;max-width:40rem;margin-bottom:2rem}form .button{text-decoration:none;padding:1rem 1rem;border:none;border-radius:4px;cursor:pointer;background-color:#666;color:#fff;transition:.1s linear}form p{margin-bottom:2rem!important}form .button:hover{background-color:#000;color:#fff}form label{display:none}</style>
+
+	<script>function setCookie(e,o){document.cookie=e+"="+(o||"")+"; path=/"}function getCookie(e){for(var o=e+"=",t=document.cookie.split(";"),n=0;n<t.length;n++){for(var c=t[n];" "==c.charAt(0);)c=c.substring(1,c.length);if(0==c.indexOf(o))return c.substring(o.length,c.length)}return null}function eraseCookie(e){document.cookie=e+"=; Max-Age=-99999999;"}function toggleMode(){body=document.getElementsByTagName("body")[0],body.classList.toggle("hc"),console.log("toggle"),body.classList.contains("hc")?setCookie("hc",!0):eraseCookie("hc")}document.addEventListener("DOMContentLoaded",function(e){getCookie("hc")&&(body=document.getElementsByTagName("body")[0],body.classList.toggle("hc"))});</script>
+
+	<script async defer src="https://sa.scott.fyi/app.js"></script>
+	<link rel="stylesheets" href="/stylesheets/fonts.css">
+
+</body>
+</html>
