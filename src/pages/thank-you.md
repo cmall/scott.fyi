@@ -1,6 +1,9 @@
 ---
 title: 'Thank you'
-permalink: '/thank-you/index.html'
+permalink: '/purchase-success/index.html'
+layout: 'layouts/page.njk'
 ---
 
-This is your thank you page where if someone fills in your contact form, they will be directed to. Make sure you add a nice message 🙂
+# Thank you for buying my book!
+
+Books are shipped from Vancouver via Canada Post. Please use my [Contact Form](/contact/) if you have any questions.
