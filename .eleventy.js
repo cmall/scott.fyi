@@ -1,5 +1,6 @@
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const embeds = require("eleventy-plugin-embed-everything");
 const fs = require('fs');
 
 // Import filters
@@ -55,6 +56,7 @@ module.exports = function(config) {
   // Plugins
   config.addPlugin(rssPlugin);
   config.addPlugin(syntaxHighlight);
+  config.addPlugin(embeds);
 
   // 404
   config.setBrowserSyncConfig({
